@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth"><head>
+<html lang="fr" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yotham Pinto Monteiro - Portfolio Tech &amp; Data</title>
+    <title>Yotham Pinto Monteiro - Portfolio Tech & Data</title>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Iconify (Solar Linear Icons) -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
     <style>
         :root {
             --bg-dark: #0d0d0d;
+            --orange: #F97316;
+            --green: #00c896;
+            --blue: #3b82f6;
         }
         
         body {
@@ -25,7 +25,6 @@
             background-color: var(--bg-dark);
         }
 
-        /* Animations d'apparition au scroll */
         .reveal {
             opacity: 0;
             transform: translateY(2rem);
@@ -37,7 +36,6 @@
             transform: translateY(0);
         }
 
-        /* Sélection de texte */
         ::selection {
             background-color: rgba(244, 244, 245, 0.15);
             color: #f4f4f5;
@@ -46,7 +44,7 @@
 </head>
 <body class="text-zinc-400 antialiased flex flex-col min-h-screen">
 
-    <!-- 1. NAVBAR -->
+    <!-- NAVBAR -->
     <header class="fixed top-0 w-full z-50 bg-[#0d0d0d]/80 backdrop-blur-md border-b border-white/[0.05]">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="text-zinc-100 font-semibold tracking-tighter text-base hover:opacity-70 transition-opacity">
@@ -62,7 +60,7 @@
 
     <main class="flex-grow max-w-5xl mx-auto w-full px-6 pt-32 pb-24 flex flex-col gap-32">
 
-        <!-- 2. HERO -->
+        <!-- HERO -->
         <section class="reveal pt-12 pb-8 sm:pt-24 sm:pb-16 flex flex-col items-start">
             <h1 class="sm:text-5xl md:text-6xl leading-tight text-4xl font-semibold text-zinc-100 tracking-tighter mb-6">Yotham Pinto Monteiro</h1>
             <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl leading-relaxed mb-10">
@@ -79,16 +77,14 @@
             </div>
         </section>
 
-        <!-- 3. SECTION PROJETS (OVERVIEW) -->
+        <!-- SECTION PROJETS (OVERVIEW) -->
         <section id="projets" class="reveal scroll-mt-32">
             <h2 class="text-2xl text-zinc-100 font-semibold tracking-tight mb-8">Projets</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- CARD 1: Mon Salon Fidèle -->
                 <div class="group relative block bg-[#fdf6ec] rounded-3xl p-8 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
-                    <!-- Zone de clic globale pour la carte -->
                     <a href="#monsalonfidele" class="absolute inset-0 z-0 rounded-3xl" aria-label="Voir le détail de Mon Salon Fidèle"></a>
-                    
                     <div class="relative z-10 pointer-events-none flex flex-col h-full">
                         <span class="inline-flex items-center gap-2 text-xs font-semibold text-[#F97316] mb-6 uppercase tracking-widest bg-[#F97316]/10 px-3 py-1.5 rounded-full w-max">
                             SaaS · Entrepreneuriat
@@ -111,13 +107,13 @@
                     </div>
                 </div>
 
-                <!-- CARD 2: Formation Qlik Sense -->
+                <!-- CARD 2: Qlik Sense -->
                 <a href="#qlik" class="group block bg-[#111111] border border-white/[0.05] rounded-3xl p-8 sm:p-10 transition-transform hover:-translate-y-1 duration-300">
                     <span class="inline-flex items-center gap-2 text-xs font-semibold text-[#00c896] mb-6 uppercase tracking-widest bg-[#00c896]/10 px-3 py-1.5 rounded-full">
-                        Data &amp; BI · Qlik Sense
+                        Data & BI · Qlik Sense
                     </span>
                     <h3 class="text-xl sm:text-2xl text-zinc-100 font-semibold tracking-tight mb-4 group-hover:text-[#00c896] transition-colors">
-                        Formation &amp; démonstration <br>Qlik Sense
+                        Formation & démonstration <br>Qlik Sense
                     </h3>
                     <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-8">
                         Dashboard sur données réelles d'une fédération sportive nationale. Modèle de données, cartes géographiques, Set Analysis.
@@ -127,10 +123,27 @@
                         <iconify-icon icon="solar:arrow-right-linear" width="1.5em" height="1.5em" class="transform group-hover:translate-x-1 transition-transform"></iconify-icon>
                     </div>
                 </a>
+
+                <!-- CARD 3: GLPI — pleine largeur sur mobile, moitié sur md -->
+                <a href="#glpi" class="group block bg-[#0f1623] border border-[#3b82f6]/20 rounded-3xl p-8 sm:p-10 transition-transform hover:-translate-y-1 duration-300 md:col-span-2 lg:col-span-1">
+                    <span class="inline-flex items-center gap-2 text-xs font-semibold text-[#3b82f6] mb-6 uppercase tracking-widest bg-[#3b82f6]/10 px-3 py-1.5 rounded-full">
+                        Support & ITSM · GLPI
+                    </span>
+                    <h3 class="text-xl sm:text-2xl text-zinc-100 font-semibold tracking-tight mb-4 group-hover:text-[#3b82f6] transition-colors">
+                        Paramétrage complet de GLPI <br>pour LA CROIX SAVAC
+                    </h3>
+                    <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-8">
+                        Mise en place de la gestion de tickets pour un opérateur de transport régional : catégories, groupes, règles d'attribution, notifications et SLA.
+                    </p>
+                    <div class="flex items-center justify-between text-zinc-300 font-medium text-sm mt-auto">
+                        <span>Voir le projet</span>
+                        <iconify-icon icon="solar:arrow-right-linear" width="1.5em" height="1.5em" class="transform group-hover:translate-x-1 transition-transform"></iconify-icon>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- 4. DÉTAIL PROJET 1 — MON SALON FIDÈLE -->
+        <!-- DÉTAIL PROJET 1 — MON SALON FIDÈLE -->
         <section id="monsalonfidele" class="reveal scroll-mt-32">
             <div class="mb-10 flex flex-col items-start">
                 <h2 class="text-2xl sm:text-3xl text-zinc-100 font-semibold tracking-tight leading-tight mb-6">
@@ -145,27 +158,25 @@
             </div>
 
             <div class="space-y-10">
-                <!-- Contexte & idée -->
                 <article class="space-y-4">
                     <h3 class="text-lg text-zinc-100 font-semibold tracking-tight flex items-center gap-2">
                         <iconify-icon icon="solar:lightbulb-bolt-linear" class="text-[#F97316]"></iconify-icon>
-                        Contexte &amp; idée
+                        Contexte & idée
                     </h3>
                     <div class="text-sm sm:text-base leading-relaxed space-y-4 text-zinc-400">
-                        <p class="">
+                        <p>
                             Mon Salon Fidèle est une plateforme SaaS de fidélisation client que j'ai conçue et développée pour les salons de coiffure, barbiers et instituts de beauté.
                         </p>
-                        <p class="">
+                        <p>
                             L'idée vient d'un constat du terrain : ma sœur est coiffeuse indépendante, et comme beaucoup de salons, elle gérait ses clients à la main — cartes papier, relances oubliées, aucune visibilité sur qui revenait ou non. J'ai voulu résoudre ce problème concrètement : une solution qui automatise la fidélisation, centralise les données clients et permet de communiquer de façon ciblée, sans effort quotidien pour le salon.
                         </p>
-                        <p class="">
+                        <p>
                             Projet conçu et développé seul depuis plus de six mois, aujourd'hui en production.
                         </p>
                     </div>
                 </article>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Ce que fait la plateforme -->
                     <article class="bg-white/[0.02] border border-white/[0.05] p-6 sm:p-8 rounded-2xl">
                         <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4 flex items-center gap-2">
                             <iconify-icon icon="solar:widget-add-linear" class="text-[#F97316]"></iconify-icon>
@@ -174,20 +185,19 @@
                         <ul class="space-y-4 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
                                 <iconify-icon icon="solar:star-fall-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
-                                <span class=""><strong class="text-zinc-200 font-medium">Programme de fidélité digital :</strong> points par visite ou cadeaux surprises, QR code unique par client, récompenses débloquées automatiquement. Plus de carte papier perdue.</span>
+                                <span><strong class="text-zinc-200 font-medium">Programme de fidélité digital :</strong> points par visite ou cadeaux surprises, QR code unique par client, récompenses débloquées automatiquement. Plus de carte papier perdue.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <iconify-icon icon="solar:users-group-two-rounded-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
-                                <span class=""><strong class="text-zinc-200 font-medium">CRM centralisé :</strong> base clients complète avec historique des visites, solde de points en temps réel, segmentation automatique (actifs, inactifs, nouveaux).</span>
+                                <span><strong class="text-zinc-200 font-medium">CRM centralisé :</strong> base clients complète avec historique des visites, solde de points en temps réel, segmentation automatique (actifs, inactifs, nouveaux).</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <iconify-icon icon="solar:plain-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
-                                <span class=""><strong class="text-zinc-200 font-medium">Marketing ciblé :</strong> campagnes Email, SMS et WhatsApp envoyées selon des segments précis (clients inactifs, anniversaires, première visite…).</span>
+                                <span><strong class="text-zinc-200 font-medium">Marketing ciblé :</strong> campagnes Email, SMS et WhatsApp envoyées selon des segments précis (clients inactifs, anniversaires, première visite…).</span>
                             </li>
                         </ul>
                     </article>
 
-                    <!-- Stade actuel -->
                     <article class="bg-white/[0.02] border border-white/[0.05] p-6 sm:p-8 rounded-2xl">
                         <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4 flex items-center gap-2">
                             <iconify-icon icon="solar:rocket-linear" class="text-[#F97316]"></iconify-icon>
@@ -206,18 +216,16 @@
                                 <div class="w-1.5 h-1.5 rounded-full bg-zinc-600 flex-shrink-0"></div>
                                 <span class="text-zinc-300">Phase de prospection en cours</span>
                             </li>
-                            
                         </ul>
                     </article>
                 </div>
 
-                <!-- Stack technique -->
                 <article class="relative pl-6 sm:pl-8 border-l border-white/[0.05]">
                     <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4">Stack technique</h3>
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-base">
                         <li class="flex items-start gap-3">
                             <iconify-icon icon="solar:server-square-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
-                            <span class=""><strong class="text-zinc-200 font-medium">Backend :</strong> Node.js avec API REST, hébergé sur Render.com</span>
+                            <span><strong class="text-zinc-200 font-medium">Backend :</strong> Node.js avec API REST, hébergé sur Render.com</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <iconify-icon icon="solar:database-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
@@ -225,16 +233,12 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <iconify-icon icon="solar:shield-keyhole-linear" class="mt-1 text-zinc-500 flex-shrink-0"></iconify-icon>
-                            <span class=""><strong class="text-zinc-200 font-medium">Sécurité :</strong> JWT tokens, tokens uniques par salon, HTTPS, RGPD compliant</span>
+                            <span><strong class="text-zinc-200 font-medium">Sécurité :</strong> JWT tokens, tokens uniques par salon, HTTPS, RGPD compliant</span>
                         </li>
-                        
-                        
-                        
                     </ul>
                 </article>
 
-                <!-- Tags Outils -->
-                <div class="">
+                <div>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Node.js</span>
                         <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">API REST</span>
@@ -252,21 +256,20 @@
 
         <hr class="border-white/[0.05]">
 
-        <!-- 5. DÉTAIL PROJET 2 — QLIK SENSE -->
+        <!-- DÉTAIL PROJET 2 — QLIK SENSE -->
         <section id="qlik" class="reveal scroll-mt-32">
             <div class="mb-10">
                 <h2 class="text-2xl sm:text-3xl text-zinc-100 font-semibold tracking-tight leading-tight">
-                    Formation &amp; démonstration Qlik Sense — <br class="hidden sm:block">
+                    Formation & démonstration Qlik Sense — <br class="hidden sm:block">
                     <span class="text-zinc-500 font-medium">Fédération sportive nationale</span>
                 </h2>
             </div>
 
             <div class="space-y-10">
-                <!-- Contexte & objectif -->
                 <article class="space-y-4">
                     <h3 class="text-lg text-zinc-100 font-semibold tracking-tight flex items-center gap-2">
                         <iconify-icon icon="solar:target-linear" class="text-[#00c896]"></iconify-icon>
-                        Contexte &amp; objectif
+                        Contexte & objectif
                     </h3>
                     <div class="text-sm sm:text-base leading-relaxed space-y-4 text-zinc-400">
                         <p>
@@ -282,41 +285,38 @@
                                 <span><strong class="text-zinc-200 font-medium">Jour 2 :</strong> présentation d'un dashboard complet construit sur les vraies données de la fédération, pour leur montrer concrètement ce que Qlik peut apporter à leur organisation.</span>
                             </li>
                         </ul>
-                        <p class="">
+                        <p>
                             L'objectif était de démontrer l'impact de Qlik sur leurs propres données : visualiser la répartition de leurs clubs et adhérents sur le territoire, filtrer par saison, naviguer de la région jusqu'au département.
                         </p>
                     </div>
                 </article>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Données & Modèle -->
                     <article class="bg-white/[0.02] border border-white/[0.05] p-6 sm:p-8 rounded-2xl">
                         <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4 flex items-center gap-2">
                             <iconify-icon icon="solar:database-linear" class="text-[#00c896]"></iconify-icon>
-                            Données &amp; modèle de données
+                            Données & modèle de données
                         </h3>
                         <ul class="space-y-4 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 flex-shrink-0"></div>
-                                <span class=""><strong class="text-zinc-200 font-medium">Clubs / organisations :</strong> clubs affiliés, rattachés à des comités départementaux et régionaux.</span>
+                                <span><strong class="text-zinc-200 font-medium">Clubs / organisations :</strong> clubs affiliés, rattachés à des comités départementaux et régionaux.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 flex-shrink-0"></div>
-                                <span class=""><strong class="text-zinc-200 font-medium">Adhérents / licenciés :</strong> individus distincts de leurs adhésions, pour analyser le nombre de personnes et leur répartition multi-saisons.</span>
+                                <span><strong class="text-zinc-200 font-medium">Adhérents / licenciés :</strong> individus distincts de leurs adhésions, pour analyser le nombre de personnes et leur répartition multi-saisons.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-zinc-600 mt-2 flex-shrink-0"></div>
-                                <span class=""><strong class="text-zinc-200 font-medium">Saisons :</strong> données disponibles depuis 2000, exploitables à partir de 2016.</span>
+                                <span><strong class="text-zinc-200 font-medium">Saisons :</strong> données disponibles depuis 2000, exploitables à partir de 2016.</span>
                             </li>
-                            
                         </ul>
                     </article>
 
-                    <!-- Script & transformations -->
                     <article class="bg-white/[0.02] border border-white/[0.05] p-6 sm:p-8 rounded-2xl">
                         <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4 flex items-center gap-2">
                             <iconify-icon icon="solar:code-square-linear" class="text-[#00c896]"></iconify-icon>
-                            Script &amp; transformations clés
+                            Script & transformations clés
                         </h3>
                         <ul class="space-y-4 text-sm sm:text-base">
                             <li class="flex items-start gap-3">
@@ -329,15 +329,14 @@
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="w-1.5 h-1.5 rounded-full bg-[#00c896]/50 mt-2 flex-shrink-0"></div>
-                                <span><strong class="text-zinc-200 font-medium">Gestion des ambiguïtés géographiques :</strong> certains départements reconnus hors de France (ex : le Jura côté Suisse). Résolu en paramétrant le pays à 'fr' et la région administrative dans les options de carte Qlik.</span>
+                                <span><strong class="text-zinc-200 font-medium">Gestion des ambiguïtés géographiques :</strong> certains départements reconnus hors de France. Résolu en paramétrant le pays à 'fr' et la région administrative dans les options de carte Qlik.</span>
                             </li>
                         </ul>
                     </article>
                 </div>
 
-                <!-- Visualisations & analyses -->
                 <article class="relative pl-6 sm:pl-8 border-l border-white/[0.05]">
-                    <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4">Visualisations &amp; analyses</h3>
+                    <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-4">Visualisations & analyses</h3>
                     <p class="text-sm sm:text-base mb-4">La section cartographique a particulièrement retenu l'attention de la fédération, avec deux cartes complémentaires :</p>
                     <ul class="list-none space-y-3 mb-4 text-sm sm:text-base">
                         <li class="flex items-start gap-3">
@@ -346,25 +345,23 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <iconify-icon icon="solar:users-group-two-rounded-linear" class="mt-1 text-zinc-500"></iconify-icon>
-                            <span class=""><strong class="text-zinc-200 font-medium">Carte 2 : Répartition des adhérents par département —</strong> visualisation directement au niveau départemental.</span>
+                            <span><strong class="text-zinc-200 font-medium">Carte 2 : Répartition des adhérents par département —</strong> visualisation directement au niveau départemental.</span>
                         </li>
                     </ul>
                     <p class="text-sm sm:text-base">Le dashboard intègre des filtres interactifs (club, type, saison, région, département, produit) pour naviguer librement dans les données.</p>
                 </article>
 
-                <!-- Impact & retour -->
                 <article class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05]">
                     <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-3 flex items-center gap-2">
                         <iconify-icon icon="solar:star-linear" class="text-zinc-300"></iconify-icon>
-                        Impact &amp; retour
+                        Impact & retour
                     </h3>
                     <p class="text-sm sm:text-base leading-relaxed">
                         En travaillant sur les données réelles, nous avons mis en évidence des incohérences (saisons incomplètes avant 2016, noms non standardisés), permettant à la fédération de prendre conscience de l'état de leur base. La fédération a exprimé sa satisfaction à l'issue de la démonstration, soulignant leur surprise face au niveau et à l'implication d'un jeune stagiaire.
                     </p>
                 </article>
 
-                <!-- Tags Outils -->
-                <div class="">
+                <div>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Qlik Sense</span>
                         <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">SQL</span>
@@ -378,64 +375,205 @@
             </div>
         </section>
 
-        <!-- 6. SECTION COMPÉTENCES -->
-        <section id="competences" class="reveal scroll-mt-32">
-            <h2 class="text-2xl text-zinc-100 font-semibold tracking-tight mb-8">Compétences</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Qlik Sense -->
-                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
-                    <div class="w-12 h-12 rounded-xl bg-[#00c896]/10 flex items-center justify-center text-[#00c896] mb-6">
-                        <iconify-icon icon="solar:pie-chart-2-linear" width="1.5em" height="1.5em"></iconify-icon>
-                    </div>
-                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">Qlik Sense</h3>
-                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
-                            Modèle de données (tables, clés, relations)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
-                            Script de chargement (LOAD, INLINE, filtres, champs calculés)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
-                            Master Items (dimensions &amp; mesures réutilisables)
-                        </li>
-                        
-                        
-                        
-                        
-                    </ul>
-                </div>
+        <hr class="border-white/[0.05]">
 
-                <!-- Gestion des données & automatisation -->
-                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
-                    <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-zinc-300 mb-6">
-                        <iconify-icon icon="solar:server-square-linear" width="1.5em" height="1.5em"></iconify-icon>
+        <!-- DÉTAIL PROJET 3 — GLPI / LA CROIX SAVAC -->
+        <section id="glpi" class="reveal scroll-mt-32">
+            <div class="mb-10">
+                <h2 class="text-2xl sm:text-3xl text-zinc-100 font-semibold tracking-tight leading-tight">
+                    Paramétrage complet de GLPI — <br class="hidden sm:block">
+                    <span class="text-zinc-500 font-medium">LA CROIX SAVAC, opérateur de transport régional</span>
+                </h2>
+            </div>
+
+            <div class="space-y-10">
+                <!-- Contexte & objectif -->
+                <article class="space-y-4">
+                    <h3 class="text-lg text-zinc-100 font-semibold tracking-tight flex items-center gap-2">
+                        <iconify-icon icon="solar:target-linear" class="text-[#3b82f6]"></iconify-icon>
+                        Contexte & objectif
+                    </h3>
+                    <div class="text-sm sm:text-base leading-relaxed space-y-4 text-zinc-400">
+                        <p>
+                            Dans le cadre d'un stage chez Stere Informatique, j'ai réalisé le paramétrage complet de GLPI pour le client LA CROIX SAVAC, un opérateur de transport régional.
+                        </p>
+                        <p>
+                            L'objectif était de structurer et d'automatiser entièrement leur gestion de tickets : depuis la création jusqu'à la clôture, en passant par l'attribution automatique, les notifications et les engagements de service (SLA).
+                        </p>
                     </div>
-                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">Gestion des données &amp; automatisation</h3>
-                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
-                            Source SQL (lecture et chargement dans Qlik)
+                </article>
+
+                <!-- Ce qui a été mis en place -->
+                <article class="bg-white/[0.02] border border-white/[0.05] p-6 sm:p-8 rounded-2xl">
+                    <h3 class="text-lg text-zinc-100 font-semibold tracking-tight mb-6 flex items-center gap-2">
+                        <iconify-icon icon="solar:settings-linear" class="text-[#3b82f6]"></iconify-icon>
+                        Ce qui a été mis en place
+                    </h3>
+                    <ul class="space-y-4 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3b82f6]/60 mt-2 flex-shrink-0"></div>
+                            <span><strong class="text-zinc-200 font-medium">Création des catégories de tickets, groupes et utilisateurs —</strong> structuration complète de l'organisation interne pour une gestion claire des responsabilités.</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
-                            Excel (structuration et nettoyage)
+                        <li class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3b82f6]/60 mt-2 flex-shrink-0"></div>
+                            <span><strong class="text-zinc-200 font-medium">Conception des formulaires de tickets —</strong> formulaires adaptés aux besoins du client, avec les champs nécessaires selon le type de demande.</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
-                            Détection d'incohérences de données
+                        <li class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3b82f6]/60 mt-2 flex-shrink-0"></div>
+                            <span><strong class="text-zinc-200 font-medium">Règles d'attribution automatique —</strong> affectation des tickets au bon groupe selon la catégorie, sans intervention manuelle.</span>
                         </li>
-                        
-                        
+                        <li class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3b82f6]/60 mt-2 flex-shrink-0"></div>
+                            <span><strong class="text-zinc-200 font-medium">Mise en place des notifications —</strong> alertes automatiques à chaque étape du cycle de vie du ticket (création, mise à jour, résolution, clôture).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#3b82f6]/60 mt-2 flex-shrink-0"></div>
+                            <span><strong class="text-zinc-200 font-medium">Définition des SLA et clôture automatique —</strong> engagements de service définis et fermeture automatique des tickets sans réponse après 7 jours.</span>
+                        </li>
                     </ul>
+                </article>
+
+                <!-- Tags outils -->
+                <div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">GLPI</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Gestion de tickets</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Règles d'attribution</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">SLA</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Notifications</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">ITSM</span>
+                        <span class="px-3 py-1.5 text-xs font-medium text-zinc-300 bg-white/[0.03] border border-white/[0.08] rounded-md">Stere Informatique</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. SECTION CONTACT (FORMULAIRE) -->
+        <!-- SECTION COMPÉTENCES -->
+        <section id="competences" class="reveal scroll-mt-32">
+            <h2 class="text-2xl text-zinc-100 font-semibold tracking-tight mb-8">Compétences</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Bloc 1 : SaaS & Développement -->
+                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
+                    <div class="w-12 h-12 rounded-xl bg-[#F97316]/10 flex items-center justify-center text-[#F97316] mb-6">
+                        <iconify-icon icon="solar:code-square-linear" width="1.5em" height="1.5em"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">SaaS & Développement</h3>
+                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
+                            Node.js, API REST, JavaScript, HTML/CSS
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
+                            Tailwind CSS, interfaces responsive
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
+                            Airtable (18 tables, relations complexes)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
+                            Make (automatisations no-code), JWT, Render.com
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#F97316] flex-shrink-0"></iconify-icon>
+                            QR codes dynamiques, segmentation client
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 2 : Data & BI -->
+                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
+                    <div class="w-12 h-12 rounded-xl bg-[#00c896]/10 flex items-center justify-center text-[#00c896] mb-6">
+                        <iconify-icon icon="solar:pie-chart-2-linear" width="1.5em" height="1.5em"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">Data & BI</h3>
+                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
+                            Qlik Sense — dashboards, Set Analysis, cartes
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
+                            Modèle de données (tables, clés, relations, LOAD INLINE)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
+                            SQL — lecture et chargement de données
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
+                            Excel — structuration, nettoyage, analyse
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#00c896] flex-shrink-0"></iconify-icon>
+                            Détection d'incohérences et qualité des données
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 3 : Support & ITSM -->
+                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
+                    <div class="w-12 h-12 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center text-[#3b82f6] mb-6">
+                        <iconify-icon icon="solar:ticket-linear" width="1.5em" height="1.5em"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">Support & ITSM</h3>
+                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#3b82f6] flex-shrink-0"></iconify-icon>
+                            GLPI — paramétrage complet de A à Z
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#3b82f6] flex-shrink-0"></iconify-icon>
+                            Création de formulaires de tickets sur mesure
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#3b82f6] flex-shrink-0"></iconify-icon>
+                            Règles d'attribution automatique par catégorie / groupe
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#3b82f6] flex-shrink-0"></iconify-icon>
+                            Notifications à chaque étape du cycle de vie
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-[#3b82f6] flex-shrink-0"></iconify-icon>
+                            Définition des SLA et clôture automatique
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 4 : Outils & environnement -->
+                <div class="p-6 sm:p-8 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
+                    <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-zinc-300 mb-6">
+                        <iconify-icon icon="solar:server-square-linear" width="1.5em" height="1.5em"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg text-zinc-100 font-semibold mb-5 tracking-tight">Outils & environnement</h3>
+                    <ul class="space-y-3 text-sm sm:text-base text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 flex-shrink-0"></iconify-icon>
+                            VirtualBox, VMware — virtualisation
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 flex-shrink-0"></iconify-icon>
+                            MailerLite — emailing et campagnes
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 flex-shrink-0"></iconify-icon>
+                            Git — gestion de version basique
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 flex-shrink-0"></iconify-icon>
+                            Linux / Windows Server — environnements courants
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT -->
         <section class="reveal scroll-mt-32" id="contact">
             <div class="bg-white/[0.02] border border-white/[0.05] rounded-3xl p-8 sm:p-12 md:p-16 max-w-2xl mx-auto shadow-2xl">
                 <div class="text-center mb-10">
@@ -450,17 +588,17 @@
                 <form action="https://formspree.io/f/xdaljlyq" method="POST" class="flex flex-col gap-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="flex flex-col gap-2">
-                            <label for="name" class="text-xs font-medium text-zinc-300">Prénom &amp; Nom</label>
-                            <input type="text" id="name" name="name" required="" placeholder="Jean Dupont" class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all">
+                            <label for="name" class="text-xs font-medium text-zinc-300">Prénom & Nom</label>
+                            <input type="text" id="name" name="name" required placeholder="Jean Dupont" class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all">
                         </div>
                         <div class="flex flex-col gap-2">
                             <label for="email" class="text-xs font-medium text-zinc-300">Email</label>
-                            <input type="email" id="email" name="email" required="" placeholder="jean@exemple.com" class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all">
+                            <input type="email" id="email" name="email" required placeholder="jean@exemple.com" class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all">
                         </div>
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="message" class="text-xs font-medium text-zinc-300">Message</label>
-                        <textarea id="message" name="message" rows="5" required="" placeholder="Bonjour Yotham..." class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all resize-none"></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Bonjour Yotham..." class="bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all resize-none"></textarea>
                     </div>
                     <button type="submit" class="inline-flex items-center justify-center gap-2 bg-zinc-100 hover:bg-white text-[#0d0d0d] font-medium text-sm px-8 py-3.5 rounded-xl transition-colors mt-2 w-full sm:w-auto self-center">
                         <iconify-icon icon="solar:plain-linear" width="1.2em" height="1.2em"></iconify-icon>
@@ -472,16 +610,15 @@
 
     </main>
 
-    <!-- 8. FOOTER -->
+    <!-- FOOTER -->
     <footer class="border-t border-white/[0.05] mt-auto">
         <div class="flex flex-col sm:flex-row text-sm font-medium text-zinc-500 max-w-5xl mr-auto ml-auto pt-8 pr-6 pb-8 pl-6 gap-x-4 gap-y-4 items-center justify-between">
-            <p class="">© Yotham — Portfolio</p>
-            <a href="mailto:" class="hover:text-zinc-300 transition-colors text-xs">yothampinto230@gmail.com</a>
+            <p>© Yotham — Portfolio</p>
+            <a href="mailto:yothampinto230@gmail.com" class="hover:text-zinc-300 transition-colors text-xs">yothampinto230@gmail.com</a>
             <p>Île-de-France, 2026</p>
         </div>
     </footer>
 
-    <!-- Script pour les animations au scroll -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
@@ -494,7 +631,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Désactive l'observation une fois l'animation jouée
                         observer.unobserve(entry.target);
                     }
                 });
@@ -506,4 +642,5 @@
         });
     </script>
 
-</body></html>
+</body>
+</html>
